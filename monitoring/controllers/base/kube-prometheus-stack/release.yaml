@@ -36,4 +36,8 @@ spec:
         ingressClassName: traefik
         hosts:
           - grs.mw-homelab.com
-        tls: []
+        # Remember to add an entry to /etc/hosts file
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grs.mw-homelab.com
